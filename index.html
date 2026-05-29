@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joey Flavour | Music Producer</title>
-    <meta name="description" content="Joey Flavour - Electronic Music Producer & Beatmaker based in The Netherlands. Listen to demos, collaborate, and pre-save upcoming releases.">
-
-    <!-- Cymatics-style Fonts -->
+    <meta name="description" content="Joey Flavour - Electronic Music Producer & Beatmaker based in The Netherlands.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;1,9..40,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -26,8 +24,31 @@
         </div>
     </div>
 
-    <!-- CURSOR GLOW -->
-    <div class="cursor-glow" id="cursorGlow"></div>
+    <!-- GRAIN OVERLAY -->
+    <div class="grain-overlay" aria-hidden="true"></div>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- TOAST CONTAINER -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- ANNOUNCEMENT BANNER -->
+    <div class="announce-bar" id="announceBanner">
+        <div class="announce-inner">
+            <span class="announce-icon">🔥</span>
+            <span class="announce-text">
+                <strong>New Single "Midnight Protocol" is OUT NOW</strong> — Stream it everywhere
+            </span>
+            <a href="#latest" class="announce-link">
+                Listen Now <i class="fas fa-arrow-right"></i>
+            </a>
+            <button class="announce-close" id="announceBannerClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
 
     <!-- NAVIGATION -->
     <nav class="navbar" id="navbar">
@@ -76,7 +97,7 @@
         </div>
     </div>
 
-    <!-- ==================== HERO ==================== -->
+    <!-- ========== HERO ========== -->
     <section class="hero" id="home">
         <div class="hero-bg-effects">
             <div class="hero-orb hero-orb-1"></div>
@@ -85,13 +106,11 @@
             <div class="hero-grid-overlay"></div>
             <div id="particles"></div>
         </div>
-
         <div class="hero-content">
             <div class="hero-badge">
                 <span class="badge-dot"></span>
                 <span>Currently in the studio cooking</span>
             </div>
-
             <h1 class="hero-title">
                 <span class="hero-line">I Craft</span>
                 <span class="hero-line">
@@ -99,12 +118,10 @@
                 </span>
                 <span class="hero-line">That Hit Different</span>
             </h1>
-
             <p class="hero-sub">
                 Music Producer &bull; Beatmaker &bull; Sound Designer<br>
                 <span class="hero-location"><i class="fas fa-map-marker-alt"></i> The Netherlands</span>
             </p>
-
             <div class="hero-buttons">
                 <a href="#latest" class="cym-btn cym-btn-primary cym-btn-lg">
                     <i class="fas fa-play"></i>
@@ -115,7 +132,6 @@
                     <span>Collaborate</span>
                 </a>
             </div>
-
             <div class="hero-stats">
                 <div class="hero-stat">
                     <span class="hero-stat-num" data-target="500000">0</span>
@@ -133,14 +149,37 @@
                 </div>
             </div>
         </div>
-
         <div class="scroll-down">
             <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
             <span>Scroll</span>
         </div>
     </section>
 
-    <!-- ==================== LATEST ==================== -->
+    <!-- MARQUEE 1 -->
+    <div class="marquee-band">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span>JOEY FLAVOUR</span><span class="marquee-dot">✦</span>
+                <span>ELECTRONIC MUSIC</span><span class="marquee-dot">✦</span>
+                <span>THE NETHERLANDS</span><span class="marquee-dot">✦</span>
+                <span>BEATMAKER</span><span class="marquee-dot">✦</span>
+                <span>SOUND DESIGNER</span><span class="marquee-dot">✦</span>
+                <span>OPEN FOR COLLABS</span><span class="marquee-dot">✦</span>
+                <span>PRODUCER</span><span class="marquee-dot">✦</span>
+                <span>MIXING ENGINEER</span><span class="marquee-dot">✦</span>
+                <span>JOEY FLAVOUR</span><span class="marquee-dot">✦</span>
+                <span>ELECTRONIC MUSIC</span><span class="marquee-dot">✦</span>
+                <span>THE NETHERLANDS</span><span class="marquee-dot">✦</span>
+                <span>BEATMAKER</span><span class="marquee-dot">✦</span>
+                <span>SOUND DESIGNER</span><span class="marquee-dot">✦</span>
+                <span>OPEN FOR COLLABS</span><span class="marquee-dot">✦</span>
+                <span>PRODUCER</span><span class="marquee-dot">✦</span>
+                <span>MIXING ENGINEER</span><span class="marquee-dot">✦</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== LATEST ========== -->
     <section class="section" id="latest">
         <div class="container">
             <div class="section-header">
@@ -148,8 +187,6 @@
                 <h2 class="section-title">Latest Work</h2>
                 <p class="section-subtitle">Fresh out the studio — check what I've been working on</p>
             </div>
-
-            <!-- Featured Release -->
             <div class="featured-release">
                 <div class="featured-visual">
                     <div class="featured-cover" style="background: linear-gradient(135deg, #7c3aed, #ec4899, #f59e0b);">
@@ -157,7 +194,10 @@
                         <div class="featured-cover-glow"></div>
                     </div>
                     <div class="featured-cover-overlay">
-                        <button class="play-circle" id="featuredPlayBtn" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" data-title="Midnight Protocol" data-artist="Joey Flavour x Artist Name">
+                        <button class="play-circle"
+                            data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+                            data-title="Midnight Protocol"
+                            data-artist="Joey Flavour x Artist Name">
                             <i class="fas fa-play"></i>
                         </button>
                     </div>
@@ -168,9 +208,9 @@
                     <h3 class="featured-name">Midnight Protocol</h3>
                     <p class="featured-collab">Joey Flavour x Artist Name</p>
                     <p class="featured-desc">
-                        A dark, driving electronic track fusing deep bass lines with
-                        atmospheric pads and razor-sharp synths. Built for the late night
-                        sessions and festival main stages.
+                        A dark, driving electronic track fusing deep bass lines with atmospheric
+                        pads and razor-sharp synths. Built for the late night sessions and
+                        festival main stages.
                     </p>
                     <div class="featured-meta-row">
                         <span><i class="fas fa-clock"></i> 3:42</span>
@@ -179,16 +219,13 @@
                     </div>
                     <div class="featured-btn-row">
                         <a href="#" class="cym-btn cym-btn-primary">
-                            <i class="fas fa-external-link-alt"></i>
-                            <span>Pre-Save</span>
+                            <i class="fas fa-external-link-alt"></i><span>Pre-Save</span>
                         </a>
                         <a href="#" class="cym-btn cym-btn-spotify">
-                            <i class="fab fa-spotify"></i>
-                            <span>Spotify</span>
+                            <i class="fab fa-spotify"></i><span>Spotify</span>
                         </a>
                         <a href="#" class="cym-btn cym-btn-outline">
-                            <i class="fab fa-apple"></i>
-                            <span>Apple Music</span>
+                            <i class="fab fa-apple"></i><span>Apple Music</span>
                         </a>
                     </div>
                 </div>
@@ -196,14 +233,12 @@
         </div>
     </section>
 
-    <!-- ==================== AUDIO PLAYER BAR ==================== -->
+    <!-- ========== AUDIO PLAYER BAR ========== -->
     <div class="audio-player-bar" id="audioPlayerBar">
         <audio id="audioElement"></audio>
         <div class="player-container">
             <div class="player-track-info">
-                <div class="player-artwork">
-                    <i class="fas fa-music"></i>
-                </div>
+                <div class="player-artwork"><i class="fas fa-music"></i></div>
                 <div class="player-text">
                     <span class="player-title" id="playerTitle">Select a track</span>
                     <span class="player-artist" id="playerArtist">Joey Flavour</span>
@@ -211,7 +246,9 @@
             </div>
             <div class="player-controls">
                 <button class="player-btn" id="playerPrev"><i class="fas fa-step-backward"></i></button>
-                <button class="player-btn player-btn-main" id="playerPlayPause"><i class="fas fa-play" id="playPauseIcon"></i></button>
+                <button class="player-btn player-btn-main" id="playerPlayPause">
+                    <i class="fas fa-play" id="playPauseIcon"></i>
+                </button>
                 <button class="player-btn" id="playerNext"><i class="fas fa-step-forward"></i></button>
             </div>
             <div class="player-progress-section">
@@ -222,8 +259,13 @@
                 </div>
                 <span class="player-time" id="playerDuration">0:00</span>
             </div>
+            <div class="visualizer-wrap">
+                <canvas id="audioVisualizer" width="200" height="38"></canvas>
+            </div>
             <div class="player-volume">
-                <button class="player-btn" id="playerMute"><i class="fas fa-volume-up" id="volumeIcon"></i></button>
+                <button class="player-btn" id="playerMute">
+                    <i class="fas fa-volume-up" id="volumeIcon"></i>
+                </button>
                 <div class="player-volume-bar" id="playerVolumeBar">
                     <div class="player-volume-fill" id="playerVolumeFill" style="width:80%"></div>
                 </div>
@@ -231,7 +273,7 @@
         </div>
     </div>
 
-    <!-- ==================== DEMOS & COLLABS ==================== -->
+    <!-- ========== DEMOS & COLLABS ========== -->
     <section class="section section-alt" id="demos">
         <div class="container">
             <div class="section-header">
@@ -239,7 +281,6 @@
                 <h2 class="section-title">Demos & Collabs</h2>
                 <p class="section-subtitle">These tracks need your magic. Let's build something legendary together.</p>
             </div>
-
             <div class="filter-row">
                 <button class="filter-pill active" data-filter="all">All</button>
                 <button class="filter-pill" data-filter="vocals">Needs Vocals</button>
@@ -247,14 +288,14 @@
                 <button class="filter-pill" data-filter="remix">Remix Stems</button>
                 <button class="filter-pill" data-filter="feedback">Feedback</button>
             </div>
-
             <div class="demos-grid" id="demosGrid">
 
-                <!-- Demo 1 -->
                 <div class="demo-card" data-category="vocals">
-                    <div class="demo-visual" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                    <div class="demo-visual" style="background:linear-gradient(135deg,#667eea,#764ba2)">
                         <i class="fas fa-microphone"></i>
-                        <button class="demo-play-btn" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" data-title="Midnight Drive" data-artist="Joey Flavour">
+                        <button class="demo-play-btn"
+                            data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
+                            data-title="Midnight Drive" data-artist="Joey Flavour">
                             <i class="fas fa-play"></i>
                         </button>
                         <span class="demo-time">2:34</span>
@@ -264,27 +305,26 @@
                         <h4 class="demo-name">Midnight Drive</h4>
                         <p class="demo-specs">Future Bass &bull; 150 BPM &bull; F Minor</p>
                         <p class="demo-desc">Dreamy future bass instrumental. Think Illenium meets Flume. Perfect for a strong topline vocalist.</p>
-
                         <div class="demo-waveform-container">
                             <canvas class="demo-waveform-canvas" width="400" height="50"></canvas>
                         </div>
-
                         <div class="demo-btn-row">
                             <a href="#contact" class="cym-btn cym-btn-primary cym-btn-sm">
-                                <i class="fas fa-paper-plane"></i> <span>I'm In</span>
+                                <i class="fas fa-paper-plane"></i><span>I'm In</span>
                             </a>
                             <button class="cym-btn cym-btn-ghost cym-btn-sm">
-                                <i class="fas fa-download"></i> <span>Stems</span>
+                                <i class="fas fa-download"></i><span>Stems</span>
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Demo 2 -->
                 <div class="demo-card" data-category="collab">
-                    <div class="demo-visual" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                    <div class="demo-visual" style="background:linear-gradient(135deg,#f093fb,#f5576c)">
                         <i class="fas fa-users"></i>
-                        <button class="demo-play-btn" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" data-title="Neon Shadows" data-artist="Joey Flavour">
+                        <button class="demo-play-btn"
+                            data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+                            data-title="Neon Shadows" data-artist="Joey Flavour">
                             <i class="fas fa-play"></i>
                         </button>
                         <span class="demo-time">3:12</span>
@@ -293,28 +333,27 @@
                         <div class="demo-badge badge-collab">Open Collab</div>
                         <h4 class="demo-name">Neon Shadows</h4>
                         <p class="demo-specs">Synthwave &bull; 128 BPM &bull; A Minor</p>
-                        <p class="demo-desc">Retro synthwave banger looking for a producer to add guitars, additional synth layers and drums.</p>
-
+                        <p class="demo-desc">Retro synthwave banger looking for a producer to add guitars and additional synth layers.</p>
                         <div class="demo-waveform-container">
                             <canvas class="demo-waveform-canvas" width="400" height="50"></canvas>
                         </div>
-
                         <div class="demo-btn-row">
                             <a href="#contact" class="cym-btn cym-btn-primary cym-btn-sm">
-                                <i class="fas fa-paper-plane"></i> <span>I'm In</span>
+                                <i class="fas fa-paper-plane"></i><span>I'm In</span>
                             </a>
                             <button class="cym-btn cym-btn-ghost cym-btn-sm">
-                                <i class="fas fa-download"></i> <span>Stems</span>
+                                <i class="fas fa-download"></i><span>Stems</span>
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Demo 3 -->
                 <div class="demo-card" data-category="remix">
-                    <div class="demo-visual" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                    <div class="demo-visual" style="background:linear-gradient(135deg,#4facfe,#00f2fe)">
                         <i class="fas fa-sync-alt"></i>
-                        <button class="demo-play-btn" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" data-title="Crystal Caverns" data-artist="Joey Flavour">
+                        <button class="demo-play-btn"
+                            data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"
+                            data-title="Crystal Caverns" data-artist="Joey Flavour">
                             <i class="fas fa-play"></i>
                         </button>
                         <span class="demo-time">4:01</span>
@@ -323,28 +362,27 @@
                         <div class="demo-badge badge-remix">Remix Stems</div>
                         <h4 class="demo-name">Crystal Caverns</h4>
                         <p class="demo-specs">Melodic Techno &bull; 124 BPM &bull; D Minor</p>
-                        <p class="demo-desc">Full stems available. Go crazy with it — best remix gets an official release on all platforms.</p>
-
+                        <p class="demo-desc">Full stems available. Go crazy — best remix gets an official release on all platforms.</p>
                         <div class="demo-waveform-container">
                             <canvas class="demo-waveform-canvas" width="400" height="50"></canvas>
                         </div>
-
                         <div class="demo-btn-row">
                             <a href="#contact" class="cym-btn cym-btn-primary cym-btn-sm">
-                                <i class="fas fa-paper-plane"></i> <span>I'm In</span>
+                                <i class="fas fa-paper-plane"></i><span>I'm In</span>
                             </a>
                             <button class="cym-btn cym-btn-ghost cym-btn-sm">
-                                <i class="fas fa-download"></i> <span>Stems</span>
+                                <i class="fas fa-download"></i><span>Stems</span>
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Demo 4 -->
                 <div class="demo-card" data-category="feedback">
-                    <div class="demo-visual" style="background: linear-gradient(135deg, #fa709a, #fee140);">
+                    <div class="demo-visual" style="background:linear-gradient(135deg,#fa709a,#fee140)">
                         <i class="fas fa-comment-dots"></i>
-                        <button class="demo-play-btn" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" data-title="Solar Flare" data-artist="Joey Flavour">
+                        <button class="demo-play-btn"
+                            data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"
+                            data-title="Solar Flare" data-artist="Joey Flavour">
                             <i class="fas fa-play"></i>
                         </button>
                         <span class="demo-time">2:58</span>
@@ -353,28 +391,27 @@
                         <div class="demo-badge badge-feedback">Feedback Wanted</div>
                         <h4 class="demo-name">Solar Flare</h4>
                         <p class="demo-specs">House &bull; 126 BPM &bull; G Minor</p>
-                        <p class="demo-desc">Experimental house vibes. Not sure about the drop arrangement — would love honest producer feedback.</p>
-
+                        <p class="demo-desc">Experimental house vibes. Not sure about the drop — would love honest producer feedback.</p>
                         <div class="demo-waveform-container">
                             <canvas class="demo-waveform-canvas" width="400" height="50"></canvas>
                         </div>
-
                         <div class="demo-btn-row">
                             <a href="#contact" class="cym-btn cym-btn-primary cym-btn-sm">
-                                <i class="fas fa-comment"></i> <span>Feedback</span>
+                                <i class="fas fa-comment"></i><span>Feedback</span>
                             </a>
                             <button class="cym-btn cym-btn-ghost cym-btn-sm">
-                                <i class="fas fa-download"></i> <span>Stems</span>
+                                <i class="fas fa-download"></i><span>Stems</span>
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Demo 5 -->
                 <div class="demo-card" data-category="vocals">
-                    <div class="demo-visual" style="background: linear-gradient(135deg, #a18cd1, #fbc2eb);">
+                    <div class="demo-visual" style="background:linear-gradient(135deg,#a18cd1,#fbc2eb)">
                         <i class="fas fa-microphone-alt"></i>
-                        <button class="demo-play-btn" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" data-title="Velvet Sky" data-artist="Joey Flavour">
+                        <button class="demo-play-btn"
+                            data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3"
+                            data-title="Velvet Sky" data-artist="Joey Flavour">
                             <i class="fas fa-play"></i>
                         </button>
                         <span class="demo-time">3:28</span>
@@ -383,28 +420,27 @@
                         <div class="demo-badge badge-vocals">Needs Vocals</div>
                         <h4 class="demo-name">Velvet Sky</h4>
                         <p class="demo-specs">Pop Electronic &bull; 118 BPM &bull; C Major</p>
-                        <p class="demo-desc">Uplifting pop-electronic crossover. Needs a catchy hook and verses. Radio-ready potential.</p>
-
+                        <p class="demo-desc">Uplifting pop-electronic crossover. Needs a catchy hook. Radio-ready potential.</p>
                         <div class="demo-waveform-container">
                             <canvas class="demo-waveform-canvas" width="400" height="50"></canvas>
                         </div>
-
                         <div class="demo-btn-row">
                             <a href="#contact" class="cym-btn cym-btn-primary cym-btn-sm">
-                                <i class="fas fa-paper-plane"></i> <span>I'm In</span>
+                                <i class="fas fa-paper-plane"></i><span>I'm In</span>
                             </a>
                             <button class="cym-btn cym-btn-ghost cym-btn-sm">
-                                <i class="fas fa-download"></i> <span>Stems</span>
+                                <i class="fas fa-download"></i><span>Stems</span>
                             </button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Demo 6 -->
                 <div class="demo-card" data-category="collab">
-                    <div class="demo-visual" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">
+                    <div class="demo-visual" style="background:linear-gradient(135deg,#43e97b,#38f9d7)">
                         <i class="fas fa-bolt"></i>
-                        <button class="demo-play-btn" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3" data-title="Gravity Pull" data-artist="Joey Flavour">
+                        <button class="demo-play-btn"
+                            data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3"
+                            data-title="Gravity Pull" data-artist="Joey Flavour">
                             <i class="fas fa-play"></i>
                         </button>
                         <span class="demo-time">3:55</span>
@@ -413,18 +449,16 @@
                         <div class="demo-badge badge-collab">Open Collab</div>
                         <h4 class="demo-name">Gravity Pull</h4>
                         <p class="demo-specs">Drum & Bass &bull; 174 BPM &bull; E Minor</p>
-                        <p class="demo-desc">High-energy DnB roller. Looking for someone to add vocal chops, additional percussion and a sick second drop.</p>
-
+                        <p class="demo-desc">High-energy DnB roller. Looking for vocal chops, extra percussion and a sick second drop.</p>
                         <div class="demo-waveform-container">
                             <canvas class="demo-waveform-canvas" width="400" height="50"></canvas>
                         </div>
-
                         <div class="demo-btn-row">
                             <a href="#contact" class="cym-btn cym-btn-primary cym-btn-sm">
-                                <i class="fas fa-paper-plane"></i> <span>I'm In</span>
+                                <i class="fas fa-paper-plane"></i><span>I'm In</span>
                             </a>
                             <button class="cym-btn cym-btn-ghost cym-btn-sm">
-                                <i class="fas fa-download"></i> <span>Stems</span>
+                                <i class="fas fa-download"></i><span>Stems</span>
                             </button>
                         </div>
                     </div>
@@ -434,7 +468,31 @@
         </div>
     </section>
 
-    <!-- ==================== RELEASES ==================== -->
+    <!-- MARQUEE 2 (reverse) -->
+    <div class="marquee-band marquee-band-dark marquee-reverse">
+        <div class="marquee-track">
+            <div class="marquee-content">
+                <span>FUTURE BASS</span><span class="marquee-dot">✦</span>
+                <span>MELODIC TECHNO</span><span class="marquee-dot">✦</span>
+                <span>DRUM & BASS</span><span class="marquee-dot">✦</span>
+                <span>SYNTHWAVE</span><span class="marquee-dot">✦</span>
+                <span>HOUSE MUSIC</span><span class="marquee-dot">✦</span>
+                <span>AMBIENT</span><span class="marquee-dot">✦</span>
+                <span>ELECTRONIC</span><span class="marquee-dot">✦</span>
+                <span>BASS MUSIC</span><span class="marquee-dot">✦</span>
+                <span>FUTURE BASS</span><span class="marquee-dot">✦</span>
+                <span>MELODIC TECHNO</span><span class="marquee-dot">✦</span>
+                <span>DRUM & BASS</span><span class="marquee-dot">✦</span>
+                <span>SYNTHWAVE</span><span class="marquee-dot">✦</span>
+                <span>HOUSE MUSIC</span><span class="marquee-dot">✦</span>
+                <span>AMBIENT</span><span class="marquee-dot">✦</span>
+                <span>ELECTRONIC</span><span class="marquee-dot">✦</span>
+                <span>BASS MUSIC</span><span class="marquee-dot">✦</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== RELEASES ========== -->
     <section class="section" id="releases">
         <div class="container">
             <div class="section-header">
@@ -442,13 +500,12 @@
                 <h2 class="section-title">Official Releases</h2>
                 <p class="section-subtitle">Stream everywhere. Pre-save what's coming next.</p>
             </div>
-
             <div class="releases-grid">
 
-                <!-- Upcoming Release -->
+                <!-- Upcoming -->
                 <div class="release-card release-upcoming">
                     <div class="release-upcoming-glow"></div>
-                    <div class="release-artwork" style="background: linear-gradient(135deg, #7c3aed, #ec4899);">
+                    <div class="release-artwork" style="background:linear-gradient(135deg,#7c3aed,#ec4899)">
                         <i class="fas fa-clock"></i>
                     </div>
                     <div class="release-body">
@@ -458,26 +515,39 @@
                         <p class="release-date"><i class="fas fa-calendar-alt"></i> January 15, 2025</p>
                         <div class="presave-row">
                             <a href="#" class="cym-btn cym-btn-spotify cym-btn-sm">
-                                <i class="fab fa-spotify"></i> <span>Pre-Save</span>
+                                <i class="fab fa-spotify"></i><span>Pre-Save</span>
                             </a>
                             <a href="#" class="cym-btn cym-btn-apple cym-btn-sm">
-                                <i class="fab fa-apple"></i> <span>Pre-Save</span>
+                                <i class="fab fa-apple"></i><span>Pre-Save</span>
                             </a>
                         </div>
-                        <div class="countdown" data-date="2025-01-15T00:00:00">
-                            <div class="cd-block"><span class="cd-val" data-unit="days">00</span><span class="cd-lbl">Days</span></div>
-                            <div class="cd-block"><span class="cd-val" data-unit="hours">00</span><span class="cd-lbl">Hrs</span></div>
-                            <div class="cd-block"><span class="cd-val" data-unit="mins">00</span><span class="cd-lbl">Min</span></div>
-                            <div class="cd-block"><span class="cd-val" data-unit="secs">00</span><span class="cd-lbl">Sec</span></div>
+                        <div class="countdown" data-date="2025-06-01T00:00:00">
+                            <div class="cd-block">
+                                <span class="cd-val" data-unit="days">00</span>
+                                <span class="cd-lbl">Days</span>
+                            </div>
+                            <div class="cd-block">
+                                <span class="cd-val" data-unit="hours">00</span>
+                                <span class="cd-lbl">Hrs</span>
+                            </div>
+                            <div class="cd-block">
+                                <span class="cd-val" data-unit="mins">00</span>
+                                <span class="cd-lbl">Min</span>
+                            </div>
+                            <div class="cd-block">
+                                <span class="cd-val" data-unit="secs">00</span>
+                                <span class="cd-lbl">Sec</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Released -->
                 <div class="release-card">
-                    <div class="release-artwork" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                    <div class="release-artwork" style="background:linear-gradient(135deg,#667eea,#764ba2)">
                         <i class="fas fa-compact-disc"></i>
-                        <button class="release-play-btn" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3" data-title="After Dark EP" data-artist="Joey Flavour">
+                        <button class="release-play-btn"
+                            data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3"
+                            data-title="After Dark EP" data-artist="Joey Flavour">
                             <i class="fas fa-play"></i>
                         </button>
                     </div>
@@ -486,18 +556,20 @@
                         <p class="release-artist-name">Joey Flavour</p>
                         <p class="release-date"><i class="fas fa-calendar-alt"></i> Nov 2024</p>
                         <div class="stream-icons">
-                            <a href="#" title="Spotify"><i class="fab fa-spotify"></i></a>
-                            <a href="#" title="Apple Music"><i class="fab fa-apple"></i></a>
-                            <a href="#" title="SoundCloud"><i class="fab fa-soundcloud"></i></a>
-                            <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-spotify"></i></a>
+                            <a href="#"><i class="fab fa-apple"></i></a>
+                            <a href="#"><i class="fab fa-soundcloud"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="release-card">
-                    <div class="release-artwork" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                    <div class="release-artwork" style="background:linear-gradient(135deg,#f093fb,#f5576c)">
                         <i class="fas fa-compact-disc"></i>
-                        <button class="release-play-btn" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3" data-title="Digital Dreams" data-artist="Joey Flavour x Collab">
+                        <button class="release-play-btn"
+                            data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3"
+                            data-title="Digital Dreams" data-artist="Joey Flavour x Collab">
                             <i class="fas fa-play"></i>
                         </button>
                     </div>
@@ -515,9 +587,11 @@
                 </div>
 
                 <div class="release-card">
-                    <div class="release-artwork" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                    <div class="release-artwork" style="background:linear-gradient(135deg,#4facfe,#00f2fe)">
                         <i class="fas fa-compact-disc"></i>
-                        <button class="release-play-btn" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3" data-title="Wavelength" data-artist="Joey Flavour">
+                        <button class="release-play-btn"
+                            data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3"
+                            data-title="Wavelength" data-artist="Joey Flavour">
                             <i class="fas fa-play"></i>
                         </button>
                     </div>
@@ -535,9 +609,11 @@
                 </div>
 
                 <div class="release-card">
-                    <div class="release-artwork" style="background: linear-gradient(135deg, #fa709a, #fee140);">
+                    <div class="release-artwork" style="background:linear-gradient(135deg,#fa709a,#fee140)">
                         <i class="fas fa-compact-disc"></i>
-                        <button class="release-play-btn" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-11.mp3" data-title="Parallel Lines" data-artist="Joey Flavour x Artist">
+                        <button class="release-play-btn"
+                            data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-11.mp3"
+                            data-title="Parallel Lines" data-artist="Joey Flavour x Artist">
                             <i class="fas fa-play"></i>
                         </button>
                     </div>
@@ -555,9 +631,11 @@
                 </div>
 
                 <div class="release-card">
-                    <div class="release-artwork" style="background: linear-gradient(135deg, #43e97b, #38f9d7);">
+                    <div class="release-artwork" style="background:linear-gradient(135deg,#43e97b,#38f9d7)">
                         <i class="fas fa-compact-disc"></i>
-                        <button class="release-play-btn" data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-12.mp3" data-title="First Light LP" data-artist="Joey Flavour">
+                        <button class="release-play-btn"
+                            data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-12.mp3"
+                            data-title="First Light LP" data-artist="Joey Flavour">
                             <i class="fas fa-play"></i>
                         </button>
                     </div>
@@ -578,13 +656,108 @@
         </div>
     </section>
 
-    <!-- ==================== ABOUT ==================== -->
+    <!-- ========== HORIZONTAL SCROLL ========== -->
+    <section class="hscroll-section">
+        <div class="hscroll-header container">
+            <div>
+                <span class="section-label">QUICK LISTEN</span>
+                <h2 class="section-title" style="margin-bottom:0">Recent Beats</h2>
+            </div>
+            <div class="hscroll-nav-btns">
+                <button class="hscroll-nav-btn hscroll-prev"><i class="fas fa-arrow-left"></i></button>
+                <button class="hscroll-nav-btn hscroll-next"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+        <div class="hscroll-track-wrapper">
+            <div class="hscroll-track">
+                <div class="hscroll-card">
+                    <div class="hscroll-artwork" style="background:linear-gradient(135deg,#7c3aed,#ec4899)">
+                        <i class="fas fa-compact-disc"></i>
+                        <button class="demo-play-btn"
+                            data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+                            data-title="Dark Matter" data-artist="Joey Flavour">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="hscroll-body"><h5>Dark Matter</h5><p>Melodic Techno · 2:58</p></div>
+                </div>
+                <div class="hscroll-card">
+                    <div class="hscroll-artwork" style="background:linear-gradient(135deg,#f093fb,#f5576c)">
+                        <i class="fas fa-compact-disc"></i>
+                        <button class="demo-play-btn"
+                            data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
+                            data-title="Pulse Wave" data-artist="Joey Flavour">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="hscroll-body"><h5>Pulse Wave</h5><p>Future Bass · 3:12</p></div>
+                </div>
+                <div class="hscroll-card">
+                    <div class="hscroll-artwork" style="background:linear-gradient(135deg,#4facfe,#00f2fe)">
+                        <i class="fas fa-compact-disc"></i>
+                        <button class="demo-play-btn"
+                            data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+                            data-title="Iceberg" data-artist="Joey Flavour">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="hscroll-body"><h5>Iceberg</h5><p>Synthwave · 4:01</p></div>
+                </div>
+                <div class="hscroll-card">
+                    <div class="hscroll-artwork" style="background:linear-gradient(135deg,#43e97b,#38f9d7)">
+                        <i class="fas fa-compact-disc"></i>
+                        <button class="demo-play-btn"
+                            data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"
+                            data-title="Emerald City" data-artist="Joey Flavour">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="hscroll-body"><h5>Emerald City</h5><p>House · 3:44</p></div>
+                </div>
+                <div class="hscroll-card">
+                    <div class="hscroll-artwork" style="background:linear-gradient(135deg,#fa709a,#fee140)">
+                        <i class="fas fa-compact-disc"></i>
+                        <button class="demo-play-btn"
+                            data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3"
+                            data-title="Supernova" data-artist="Joey Flavour">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="hscroll-body"><h5>Supernova</h5><p>DnB · 2:50</p></div>
+                </div>
+                <div class="hscroll-card">
+                    <div class="hscroll-artwork" style="background:linear-gradient(135deg,#a18cd1,#fbc2eb)">
+                        <i class="fas fa-compact-disc"></i>
+                        <button class="demo-play-btn"
+                            data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3"
+                            data-title="Lavender Haze" data-artist="Joey Flavour">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="hscroll-body"><h5>Lavender Haze</h5><p>Ambient · 5:02</p></div>
+                </div>
+                <div class="hscroll-card">
+                    <div class="hscroll-artwork" style="background:linear-gradient(135deg,#f7971e,#ffd200)">
+                        <i class="fas fa-compact-disc"></i>
+                        <button class="demo-play-btn"
+                            data-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3"
+                            data-title="Golden Hour" data-artist="Joey Flavour">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="hscroll-body"><h5>Golden Hour</h5><p>Electronic · 3:22</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
     <section class="section section-alt" id="about">
         <div class="container">
             <div class="about-layout">
                 <div class="about-visual">
                     <div class="about-photo-frame">
-                        <div class="about-photo-placeholder" style="background: linear-gradient(135deg, #7c3aed, #2563eb);">
+                        <div class="about-photo-placeholder" style="background:linear-gradient(135deg,#7c3aed,#2563eb)">
                             <i class="fas fa-headphones"></i>
                         </div>
                     </div>
@@ -601,7 +774,7 @@
                     <h2 class="section-title">About Joey Flavour</h2>
                     <p class="about-text">
                         Yo, I'm Joey — 24 years old, based in The Netherlands. I've been
-                        making music for almost a decade now, and it's been a wild ride.
+                        making music for almost a decade now and it's been a wild ride.
                         I specialize in electronic music production and beatmaking, working
                         across genres from future bass to melodic techno to straight-up
                         club bangers.
@@ -612,7 +785,6 @@
                         that's why I put my demos out there for the world to hear. If you
                         vibe with what I do, let's create something special together.
                     </p>
-
                     <div class="about-daw-section">
                         <h4 class="about-tools-title">MY TOOLKIT</h4>
                         <div class="tools-list">
@@ -626,7 +798,6 @@
                             <div class="tool-chip"><i class="fas fa-microphone"></i> Soundtoys</div>
                         </div>
                     </div>
-
                     <div class="about-social-row">
                         <a href="#" class="social-circle" title="Spotify"><i class="fab fa-spotify"></i></a>
                         <a href="#" class="social-circle" title="SoundCloud"><i class="fab fa-soundcloud"></i></a>
@@ -640,7 +811,7 @@
         </div>
     </section>
 
-    <!-- ==================== CONTACT ==================== -->
+    <!-- ========== CONTACT ========== -->
     <section class="section" id="contact">
         <div class="container">
             <div class="section-header">
@@ -648,7 +819,6 @@
                 <h2 class="section-title">Get In Touch</h2>
                 <p class="section-subtitle">Collab, feedback, business — whatever it is, I'm all ears.</p>
             </div>
-
             <div class="contact-layout">
                 <div class="contact-cards-col">
                     <div class="contact-info-card">
@@ -667,7 +837,6 @@
                         <p>@joeyflavour</p>
                     </div>
                 </div>
-
                 <form class="contact-form" id="contactForm">
                     <div class="form-2col">
                         <div class="form-field">
@@ -700,15 +869,14 @@
                         <input type="url" placeholder="https://soundcloud.com/...">
                     </div>
                     <button type="submit" class="cym-btn cym-btn-primary cym-btn-lg cym-btn-full">
-                        <i class="fas fa-paper-plane"></i>
-                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i><span>Send Message</span>
                     </button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- ==================== FOOTER ==================== -->
+    <!-- ========== FOOTER ========== -->
     <footer class="site-footer">
         <div class="container">
             <div class="footer-grid">
@@ -754,29 +922,5 @@
     </footer>
 
     <script src="js/main.js"></script>
-</body><!-- ANNOUNCEMENT BANNER -->
-<div class="announce-bar" id="announceBanner">
-    <div class="announce-inner">
-        <span class="announce-icon">🔥</span>
-        <span class="announce-text">
-            <strong>New Single "Midnight Protocol" is OUT NOW</strong> — Stream it everywhere
-        </span>
-        <a href="#latest" class="announce-link">
-            Listen Now <i class="fas fa-arrow-right"></i>
-        </a>
-        <button class="announce-close" id="announceBannerClose">
-            <i class="fas fa-times"></i>
-        </button>
-    </div>
-</div>
-
-<!-- GRAIN OVERLAY -->
-<div class="grain-overlay" aria-hidden="true"></div>
-
-<!-- CUSTOM CURSOR -->
-<div class="cursor-dot" id="cursorDot"></div>
-<div class="cursor-ring" id="cursorRing"></div>
-
-<!-- TOAST CONTAINER -->
-<div class="toast-container" id="toastContainer"></div>
+</body>
 </html>
